@@ -1,0 +1,20 @@
+%tạo một tài liệu giống mô tả bên dưới
+\documentclass{article}
+\usepackage[utf8]{vietnam}
+\usepackage{xcolor}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+\title{Pima2021}
+\author{Long Nguyen}
+\date{July 26, 2021}
+\begin{document}
+\maketitle
+Dữ liệu được đưa dưới dạng một danh sách các vector $D$ chiều được ký hiệu là: $X = (\vec{x}_1, \vec{x}_2, \ldots, \vec{x}_n)^T$ với $\vec{x}_i \in \mathbb{R}^d$. Một phân phối chuẩn nhiều chiều định nghĩa bởi vector trung bình và $\vec{\mu}$ ma trận covariance $\Sigma$. Vector ngẫu nhiên $\vec{X}$  được gọi là tuân theo phân phối đều $D$ chiều ký hiệu là: $\vec{X} \sim N_D(\vec{\mu}, \Sigma)$, khi đó hàm mật độ xác suất có thể được tính như sau
+$$
+    f(\vec{x}; \vec{\mu}, \Sigma)
+    = \dfrac{1}{\sqrt{(2\pi)^k|\Sigma|}} \exp{-\dfrac{1}{2} (\vec{x} - \vec{\mu}) \Sigma^{-1} (\vec{x}-\vec{\mu})^T}
+$$
+\end{document}

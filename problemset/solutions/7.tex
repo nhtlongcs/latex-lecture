@@ -1,0 +1,45 @@
+\documentclass{article}
+\usepackage[utf8]{vietnam}
+\usepackage{xcolor}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage{tabularx}
+
+\title{Pima2021}
+\author{Long Nguyen}
+\date{July 26, 2021}
+\begin{document}
+\maketitle
+\tableofcontents
+\pagebreak
+
+\section{Mô tả bài toán}
+\subsection{Bài toán 1}
+Dữ liệu được đưa dưới dạng một danh sách các vector $D$ chiều được ký hiệu là: $X = (\vec{x}_1, \vec{x}_2, \ldots, \vec{x}_n)^T$ với $\vec{x}_i \in \mathbb{R}^d$. \\ 
+
+Một phân phối chuẩn nhiều chiều định nghĩa bởi vector trung bình và $\vec{\mu}$ ma trận covariance $\Sigma$. Vector ngẫu nhiên $\vec{X}$  được gọi là tuân theo phân phối đều $D$ chiều ký hiệu là: $\vec{X} \sim N_D(\vec{\mu}, \Sigma)$, khi đó hàm mật độ xác suất có thể được tính như công thức \ref{congthuc1}
+\begin{equation}
+    f(\vec{x}; \vec{\mu}, \Sigma)
+    = \dfrac{1}{\sqrt{(2\pi)^k|\Sigma|}} \exp{-\dfrac{1}{2} (\vec{x} - \vec{\mu}) \Sigma^{-1} (\vec{x}-\vec{\mu})^T}
+    \label{congthuc1}
+\end{equation}
+\subsection{Bài toán 2}
+Thầy Dũng muốn tham dự trại hè Pima 2022 ở Cape Town, Nam Phi. Tuy nhiên, do không có đường bay thẳng từ Thành phố Hồ Chí Minh đến Nam Phi nên thầy Dũng phải quá cảnh ở hai thành phố khác. Dựa vào bảng sau đây, hãy giúp thầy Dũng chọn lộ trình bay ít tốn kém nhất.\\
+\begin{table}[h]
+    \centering
+    \begin{tabularx}{\linewidth}{|l|X|X|X|X|X|X|X|X|}\hline
+     {}&HCM&Chia\-ngmai&Singa\-pore&Santa Marta&San Antonio&Los Angeles&Paris&Cape Town \\ \hline
+      {{\text{HCM}}}& - &{250}&{176}&{1039}& - & - & - & -  \\ \hline
+      {{\text{Chiangmai}}}& - & - & - & - &{1480}&{1565}&{647}& -  \\ \hline
+      {{\text{Singapore}}}& - & - & - & - &{1733}& - &{546}& -  \\ \hline
+      {{\text{Santa Marta}}}& - & - & - & - &{540}&{769}& - & -  \\ \hline
+      {{\text{San Antonio}}}& - & - & - & - & - &{-}&{-}&{1103} \\ \hline
+      {{\text{Los Angeles}}}& - & - & - & - & - & - &{-}&{967} \\ \hline
+      {{\text{Paris}}}& - & - & - & - & - & - & - &{2016} \\\hline
+      {{\text{Cape Town}}}& - & - & - & - & - & - & - & - \\ \hline
+    \end{tabularx}
+\caption{Bảng trọng số đường bay giữa các trạm}
+\end{table}
+\end{document}
