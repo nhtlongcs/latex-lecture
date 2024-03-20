@@ -1,10 +1,10 @@
-# Giáo trình LaTeX: Hướng dẫn tự học
-
 <div align="center">
-
-**A vietnamese version of the LaTeX tutorial for beginners.**
+  
+# LaTeX - A self-taught learning guide
 
 ---
+
+**A vietnamese version of the LaTeX tutorial for beginners.**
 
 Cung cấp hướng dẫn cơ bản về LaTeX để viết tài liệu học thuật. Phù hợp cho người mới bắt đầu muốn tự học LaTeX.
 </div>
@@ -59,12 +59,13 @@ Hướng dẫn này cung cấp điểm khởi đầu cho hành trình LaTeX củ
 
 Đọc toàn bộ danh sách bài tập [tại đây](problemset/problemset.pdf).
 
-**Lưu ý:**
+> [!TIP]
+> Các bài tập được sắp xếp theo thứ tự từ cơ bản đến nâng cao.
+> 
+> Bạn có thể sử dụng kết quả của bài tập trước để làm bài tập sau.
+> 
+> Tham khảo các file PDF được cung cấp để biết kết quả mong muốn.
 
-* Các bài tập được sắp xếp theo thứ tự từ cơ bản đến nâng cao.
-* Bạn có thể sử dụng kết quả của bài tập trước để làm bài tập sau.
-* Tham khảo các file PDF được cung cấp để biết kết quả mong muốn.
-* 
 
 <details close>
 <summary><strong> Bài tập 1:</strong> Biên dịch tài liệu đơn giản
@@ -245,11 +246,12 @@ Dự Án LaTeX: https://www.latex-project.org/
 
 Stack Exchange: https://tex.stackexchange.com/
 
-**Lưu ý:**
 
-Để học tốt, các bạn cần ghi nhớ
-
-- Thực hành là chìa khóa để thành thạo LaTeX.
-- Có rất nhiều tài nguyên trực tuyến giúp bạn tìm hiểu các tính năng nâng cao.
-- Đừng ngại thử nghiệm và khám phá các chức năng khác nhau.
-
+> [!WARNING]
+> Để học tốt, các bạn cần ghi nhớ
+> 
+> Thực hành là chìa khóa để thành thạo LaTeX.
+>
+> Có rất nhiều tài nguyên trực tuyến giúp bạn tìm hiểu các tính năng nâng cao.
+>
+> Đừng ngại thử nghiệm và khám phá các chức năng khác nhau.
