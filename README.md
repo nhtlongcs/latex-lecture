@@ -13,7 +13,7 @@ Cung cấp hướng dẫn cơ bản về LaTeX để viết tài liệu học th
 
 
 ```latex
-\documentclass[beamer]{theme}  % Thay thế "theme" bằng giao diện bạn chọn
+\documentclass[beamer]{theme}  
 
 \title{Giới thiệu về LaTeX}
 \author{Tên của bạn}
