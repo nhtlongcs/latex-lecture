@@ -57,7 +57,7 @@ Hướng dẫn này cung cấp điểm khởi đầu cho hành trình LaTeX củ
 
 ## Danh sách bài tập
 
-Đọc toàn bộ danh sách bài tập [tại đây](problemset/problemset.pdf).
+Đọc toàn bộ danh sách bài tập [tại đây](problemset/problems_et.pdf).
 
 > [!TIP]
 > Các bài tập được sắp xếp theo thứ tự từ cơ bản đến nâng cao.
@@ -81,7 +81,7 @@ Làm quen với giao diện soạn thảo LaTeX cơ bản. Tạo tài liệu v�
 * Xuất kết quả sang định dạng PDF.
 ```
 
-**Tham khảo:** [exercise01.pdf](problemset/exercise01.pdf) - [solution](problemset/solutions/1.tex)
+**Tham khảo:** [exercise_01.pdf](problemset/exercise_01.pdf) - [solution](problemset/solutions/1.tex)
 
 </details>
 
@@ -101,7 +101,7 @@ Sử dụng tiếng Việt trong LaTeX và định dạng kiểu chữ cơ bản
 * Định dạng kiểu chữ (đậm, nghiêng, ...).
 ```
 
-**Tham khảo:** [exercise02.pdf](problemset/exercise02.pdf) - [solution](problemset/solutions/2.tex)
+**Tham khảo:** [exercise_02.pdf](problemset/exercise_02.pdf) - [solution](problemset/solutions/2.tex)
 </details>
 
 
@@ -120,7 +120,7 @@ Sử dụng tiếng Việt trong LaTeX và định dạng kiểu chữ cơ bản
 * Đặt tiêu đề tài liệu là "Pima2021".
 ```
 
-**Tham khảo:** [exercise03.pdf](problemset/exercise03.pdf) - [solution](problemset/solutions/3.tex)
+**Tham khảo:** [exercise_03.pdf](problemset/exercise_03.pdf) - [solution](problemset/solutions/3.tex)
 
 </details>
 
@@ -138,7 +138,7 @@ Chia bài viết thành các mục và tiểu mục với tiêu đề rõ ràng.
 * Gõ công thức hàm mật độ xác suất của phân phối Gaussian.
 ```
 
-**Tham khảo:** [exercise04.pdf](problemset/exercise04.pdf) - [solution](problemset/solutions/4.tex)
+**Tham khảo:** [exercise_04.pdf](problemset/exercise_04.pdf) - [solution](problemset/solutions/4.tex)
 </details>
 
 
@@ -155,7 +155,7 @@ Sử dụng kỹ thuật `cross-reference` để tham chiếu đến nội dung 
 * Tham chiếu đến công thức đã viết trước đó.
 ```
 
-**Tham khảo:** [exercise05.pdf](problemset/exercise05.pdf) - [solution](problemset/solutions/5.tex)
+**Tham khảo:** [exercise_05.pdf](problemset/exercise_05.pdf) - [solution](problemset/solutions/5.tex)
 </details>
 
 
@@ -170,7 +170,7 @@ Tạo bảng trong tài liệu.
 * Tạo một bảng đơn giản.
 ```
 
-**Tham khảo:** [exercise06.pdf](problemset/exercise06.pdf) - [solution](problemset/solutions/6.tex)
+**Tham khảo:** [exercise_06.pdf](problemset/exercise_06.pdf) - [solution](problemset/solutions/6.tex)
 </details>
 
 
@@ -186,7 +186,7 @@ Hiển thị bảng có kích thước lớn hơn trang văn bản.
 * Xuống dòng tại từng ô trong bảng.
 ```
 
-**Tham khảo:** [exercise07.pdf](problemset/exercise07.pdf) - [solution](problemset/solutions/7.tex)
+**Tham khảo:** [exercise_07.pdf](problemset/exercise_07.pdf) - [solution](problemset/solutions/7.tex)
 </details>
 
 
@@ -205,7 +205,7 @@ Hình ảnh trong Latex
 * Đặt hình ảnh tại vị trí chỉ định.
 ```
 
-**Tham khảo:** [exercise08.pdf](problemset/exercise08.pdf) - [solution](problemset/solutions/8.tex)
+**Tham khảo:** [exercise_08.pdf](problemset/exercise_08.pdf) - [solution](problemset/solutions/8.tex)
 </details>
 
 
@@ -223,7 +223,7 @@ Format mã nguồn
 * Sử dụng package `listings` để chèn một đoạn mã.
 ```
 
-**Tham khảo:** [exercise09.pdf](problemset/exercise09.pdf) - [solution](problemset/solutions/9.tex)
+**Tham khảo:** [exercise_09.pdf](problemset/exercise_09.pdf) - [solution](problemset/solutions/9.tex)
 </details>
 
 
@@ -240,7 +240,7 @@ Làm cho mã nguồn hiển thị đẹp hơn.
 * Tăng khoảng cách giữa các dòng trong đoạn mã.
 ```
 
-**Tham khảo:** [exercise10.pdf](problemset/exercise10.pdf) - [solution](problemset/solutions/10.tex)
+**Tham khảo:** [exercise_10.pdf](problemset/exercise_10.pdf) - [solution](problemset/solutions/10.tex)
 </details>
 
 
@@ -259,7 +259,7 @@ Hướng dẫn trích dẫn và danh sách tài liệu tham khảo bằng BibTeX
 
 ```
 
-**Tham khảo:** [exercise11.pdf](problemset/exercise11.pdf) - [solution](problemset/solutions/11.tex)
+**Tham khảo:** [exercise_11.pdf](problemset/exercise_11.pdf) - [solution](problemset/solutions/11.tex)
 
 </details>
 
