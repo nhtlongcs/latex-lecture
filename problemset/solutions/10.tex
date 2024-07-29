@@ -9,9 +9,6 @@
 \usepackage{graphicx}
 \usepackage{listings}
 \usepackage{float}
-\usepackage{setspace}
-
-
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
@@ -82,7 +79,6 @@ Sobel là một thuận toán phát hiện biên cạnh dựa theo gradient trê
 \end{figure}
 
 Mã giả nguồn của thuật toán 
-\begin{onehalfspace}
 \begin{lstlisting}[language=Python]
 def sobel_edge_detection(image, filter):
     import numpy as np
@@ -93,5 +89,4 @@ def sobel_edge_detection(image, filter):
     gradient_magnitude *= 255.0 / gradient_magnitude.max()
     return gradient_magnitude
 \end{lstlisting}
-\end{onehalfspace}
 \end{document}
