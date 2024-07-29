@@ -191,7 +191,27 @@ Hiển thị bảng có kích thước lớn hơn trang văn bản.
 
 
 <details close>
+
 <summary><strong> Bài tập 8:</strong> 
+Tạo bảng/ma trận trong đại số tuyến tính (nâng cao)
+</summary>
+
+```
+Vẽ các bảng/ma trận trong đại số tuyến tính phục vụ cho mục đích mô tả và giải thích.
+
+**Yêu cầu:**
+
+* Tạo được bảng/ma trận trong đại số tuyến tính.
+```
+
+**Tham khảo:** [exercise_08.pdf](problemset/exercise_08.pdf) - [solution](problemset/solutions/8.tex)
+</details>
+
+
+
+<details close>
+
+<summary><strong> Bài tập 9:</strong> 
 Hình ảnh trong Latex
 </summary>
 
@@ -205,13 +225,13 @@ Hình ảnh trong Latex
 * Đặt hình ảnh tại vị trí chỉ định.
 ```
 
-**Tham khảo:** [exercise_08.pdf](problemset/exercise_08.pdf) - [solution](problemset/solutions/8.tex)
+**Tham khảo:** [exercise_09.pdf](problemset/exercise_09.pdf) - [solution](problemset/solutions/9.tex)
 </details>
 
 
 
 <details close>
-<summary><strong> Bài tập 9:</strong> 
+<summary><strong> Bài tập 10:</strong> 
 Chèn mã nguồn vào tài liệu
 </summary>
 
@@ -223,12 +243,12 @@ Format mã nguồn
 * Sử dụng package `listings` để chèn một đoạn mã.
 ```
 
-**Tham khảo:** [exercise_09.pdf](problemset/exercise_09.pdf) - [solution](problemset/solutions/9.tex)
+**Tham khảo:** [exercise_10.pdf](problemset/exercise_10.pdf) - [solution](problemset/solutions/10.tex)
 </details>
 
 
 <details close>
-<summary><strong> Bài tập 10:</strong> 
+<summary><strong> Bài tập 11:</strong> 
 Làm việc với khoảng cách dòng
 </summary>
 
@@ -240,12 +260,12 @@ Làm cho mã nguồn hiển thị đẹp hơn.
 * Tăng khoảng cách giữa các dòng trong đoạn mã.
 ```
 
-**Tham khảo:** [exercise_10.pdf](problemset/exercise_10.pdf) - [solution](problemset/solutions/10.tex)
+**Tham khảo:** [exercise_11.pdf](problemset/exercise_11.pdf) - [solution](problemset/solutions/11.tex)
 </details>
 
 
 <details close>
-<summary><strong> Bài tập 11:</strong> 
+<summary><strong> Bài tập 12:</strong> 
 Trích dẫn tài liệu
 </summary>
 
@@ -259,7 +279,7 @@ Hướng dẫn trích dẫn và danh sách tài liệu tham khảo bằng BibTeX
 
 ```
 
-**Tham khảo:** [exercise_11.pdf](problemset/exercise_11.pdf) - [solution](problemset/solutions/11.tex)
+**Tham khảo:** [exercise_12.pdf](problemset/exercise_12.pdf) - [solution](problemset/solutions/12.tex)
 
 </details>
 

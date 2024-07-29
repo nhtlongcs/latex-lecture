@@ -11,13 +11,11 @@
 \usepackage{float}
 \usepackage{setspace}
 
-\bibliographystyle{ieeetr}
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
-
 
 \lstdefinestyle{mystyle}{
     backgroundcolor=\color{backcolour},   
@@ -47,8 +45,6 @@
 \tableofcontents
 \pagebreak
 \section{Mô tả bài toán}
-
-
 \subsection{Bài toán 1}
 Dữ liệu được đưa dưới dạng một danh sách các vector $D$ chiều được ký hiệu là: $X = (\vec{x}_1, \vec{x}_2, \ldots, \vec{x}_n)^T$ với $\vec{x}_i \in \mathbb{R}^d$. \\ 
 
@@ -59,7 +55,7 @@ Một phân phối chuẩn nhiều chiều định nghĩa bởi vector trung bì
     \label{congthuc1}
 \end{equation}
 \subsection{Bài toán 2}
-Thầy Dũng muốn tham dự trại hè Pima 2022 ở Cape Town, Nam Phi. Tuy nhiên, do không có đường bay thẳng từ Thành phố Hồ Chí Minh đến Nam Phi nên thầy Dũng phải quá cảnh ở hai thành phố khác. Dựa vào bảng sau đây, hãy giúp thầy Dũng chọn lộ trình bay ít tốn kém nhất. Nguồn bài toán gốc từ bài giảng \cite{graph}.
+Thầy Dũng muốn tham dự trại hè Pima 2022 ở Cape Town, Nam Phi. Tuy nhiên, do không có đường bay thẳng từ Thành phố Hồ Chí Minh đến Nam Phi nên thầy Dũng phải quá cảnh ở hai thành phố khác. Dựa vào bảng sau đây, hãy giúp thầy Dũng chọn lộ trình bay ít tốn kém nhất.\\
 \begin{table}[h]
     \centering
 \begin{tabularx}{\linewidth}{|l|X|X|X|X|X|X|X|X|}\hline
@@ -98,5 +94,4 @@ def sobel_edge_detection(image, filter):
     return gradient_magnitude
 \end{lstlisting}
 \end{onehalfspace}
-\bibliography{references}
 \end{document}

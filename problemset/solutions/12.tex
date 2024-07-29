@@ -1,6 +1,5 @@
 \documentclass{article}
-% \usepackage[utf8]{vietnam}
-\usepackage[a4paper, total={6in, 8in}, margin=1in]{geometry}
+\usepackage[utf8]{vietnam}
 \usepackage{xcolor}
 
 \usepackage{amsmath}
@@ -11,11 +10,6 @@
 \usepackage{listings}
 \usepackage{float}
 \usepackage{setspace}
-
-\usepackage{array}
-\usepackage{multicol}
-\usepackage{multirow}
-\usepackage{arydshln}
 
 \bibliographystyle{ieeetr}
 
@@ -45,103 +39,64 @@
 }
 
 \lstset{style=mystyle}
-\title{Pima2024}
-\author{Toan Vong}
-\date{July 29, 2024}
+\title{Pima2021}
+\author{Long Nguyen}
+\date{July 26, 2021}
 \begin{document}
 \maketitle
 \tableofcontents
 \pagebreak
-\section{Problem Description}
+\section{Mô tả bài toán}
 
 
-\subsection{Problem 1}
-Render the matrix below:
+\subsection{Bài toán 1}
+Dữ liệu được đưa dưới dạng một danh sách các vector $D$ chiều được ký hiệu là: $X = (\vec{x}_1, \vec{x}_2, \ldots, \vec{x}_n)^T$ với $\vec{x}_i \in \mathbb{R}^d$. \\ 
 
-\[
-    \begin{array}{rl@{}:cccc:cccc:c:@{}r r@{}c@{}l}
-                                    &                                                                                            & \multicolumn{4}{c:}{\scriptstyle{\times d}}                   & \multicolumn{4}{c:}{\scriptstyle{\times d}}                & \multicolumn{1}{c:}{\scriptstyle{\times 1}}         &                                                                                                                                                                                                                                                                                               \\
-                                    & \multirow{1}{*}{$\left[\begin{array}{r}\end{array}\right.$}                                & \multicolumn{4}{c:}{\multirow{1}{*}{$\mathbf t$}}             & \multicolumn{4}{c:}{\multirow{1}{*}{$\mathbf w$}}          & w_0                                                 & \multirow{1}{*}{$\left.\begin{array}{r}\end{array}\right]$}                                                                                                                                                                                                                                   \\[0.5em]
-            \hdashline
-            \rule{0pt}{0.1em}
-        \multirow{4}{*}{$\scriptstyle{\times d}$} & \multirow{15}{*}{$\left[\begin{array}{r}\\\\\\\\\\\\\\\\\\\\\\\\\\\\\end{array}\right.$} & \multicolumn{4}{c:}{\multirow{4}{*}{$-\mathbb I_d$}}          & \multicolumn{4}{c:}{\multirow{4}{*}{$-\mathbb I_d$}}       & \multicolumn{1}{c:}{\multirow{4}{*}{$\mathbf {(0)}_d$}} & \multirow{15}{*}{$\left.\begin{array}{r}\\\\\\\\\\\\\\\\\\\\\\\\\\\\\end{array}\right]$} & \multirow{15}{*}{$\left[\begin{array}{r}\\\\\\\\\\\\\\\\\\\\\\\\\\\\\end{array}\right.$} & \multirow{4}{*}{$\mathbf {(0)}_d$}& \multirow{15}{*}{$\left.\begin{array}{r}\\\\\\\\\\\\\\\\\\\\\\\\\\\\\end{array}\right]$} \\
-                                                  &                                                                                            & \multicolumn{4}{c:}{}                                         & \multicolumn{4}{c:}{}                                      & \multicolumn{1}{c:}{                              } &                                                                                            &                                                                                            & \\
-                                                  &                                                                                            & \multicolumn{4}{c:}{}                                         & \multicolumn{4}{c:}{}                                      & \multicolumn{1}{c:}{                              } &                                                                                            &                                                                                            &                                                                                               \\
-                                                  &                                                                                            & \multicolumn{4}{c:}{}                                         & \multicolumn{4}{c:}{}                                      & \multicolumn{1}{c:}{                              } &                                                                                            &                                                                                            & \\
-        \hdashline      \rule{0pt}{1.5em}
-        \multirow{4}{*}{$\scriptstyle{\times d}$} &                                                                                            & \multicolumn{4}{c:}{\multirow{4}{*}{$-\mathbb I_d$}}          & \multicolumn{4}{c:}{\multirow{4}{*}{$\mathbb I_d$}}        & \multicolumn{1}{c:}{\multirow{4}{*}{$\mathbf {(0)}_d$}} &                                                                                            &                                                                                            & \multirow{4}{*}{$\mathbf {(0)}_d$}                                                                                                   \\
-                                                  &                                                                                            & \multicolumn{4}{c:}{}                                         & \multicolumn{4}{c:}{}                                      & \multicolumn{1}{c:}{                              } &                                                                                            &                                                                                            & \\
-                                                  &                                                                                            & \multicolumn{4}{c:}{}                                         & \multicolumn{4}{c:}{}                                      & \multicolumn{1}{c:}{                              } &                                                                                            &                                                                                            & \\
-                                                  &                                                                                            & \multicolumn{4}{c:}{}                                         & \multicolumn{4}{c:}{}                                      & \multicolumn{1}{c:}{                              } &                                                                                            &                                                                                            & \\
-        \hdashline
-        \rule{0pt}{1.5em}
-        \multirow{4}{*}{$\scriptstyle{\times n}$} &                                                                                            & \multicolumn{4}{c:}{\multirow{4}{*}{$\mathbf {(0)}_{n\times d}$}} & \multicolumn{4}{c:}{\multirow{1}{*}{$-y_1 \mathbf x_1^T$}} & \multicolumn{1}{c:}{\multirow{4}{*}{$-\mathbf y$}}  &                                                                                            &                                                                                            & \multirow{4}{*}{$-\mathbf y$}\\
-                                                  &                                                                                            & \multicolumn{4}{c:}{}                                         & \multicolumn{4}{c:}{\multirow{1}{*}{$-y_2 \mathbf x_2^T$}} & \multicolumn{1}{c:}{}                               &                                                                                            &                                                                                            &                              \\
-                                                  &                                                                                            & \multicolumn{4}{c:}{}                                         & \multicolumn{4}{c:}{\vdots}                                & \multicolumn{1}{c:}{}                               &                                                                                            &                                                                                            &                              \\
-                                                  &                                                                                            & \multicolumn{4}{c:}{}                                         & \multicolumn{4}{c:}{\multirow{1}{*}{$-y_n \mathbf x_n^T$}} & \multicolumn{1}{c:}{}                               &                                                                                            &                                                                                            &                              \\
-    \end{array}
-\]
+Một phân phối chuẩn nhiều chiều định nghĩa bởi vector trung bình và $\vec{\mu}$ ma trận covariance $\Sigma$. Vector ngẫu nhiên $\vec{X}$  được gọi là tuân theo phân phối đều $D$ chiều ký hiệu là: $\vec{X} \sim N_D(\vec{\mu}, \Sigma)$, khi đó hàm mật độ xác suất có thể được tính như công thức \ref{congthuc1}
+\begin{equation}
+    f(\vec{x}; \vec{\mu}, \Sigma)
+    = \dfrac{1}{\sqrt{(2\pi)^k|\Sigma|}} \exp{-\dfrac{1}{2} (\vec{x} - \vec{\mu}) \Sigma^{-1} (\vec{x}-\vec{\mu})^T}
+    \label{congthuc1}
+\end{equation}
+\subsection{Bài toán 2}
+Thầy Dũng muốn tham dự trại hè Pima 2022 ở Cape Town, Nam Phi. Tuy nhiên, do không có đường bay thẳng từ Thành phố Hồ Chí Minh đến Nam Phi nên thầy Dũng phải quá cảnh ở hai thành phố khác. Dựa vào bảng sau đây, hãy giúp thầy Dũng chọn lộ trình bay ít tốn kém nhất. Nguồn bài toán gốc từ bài giảng \cite{graph}.
+\begin{table}[h]
+    \centering
+\begin{tabularx}{\linewidth}{|l|X|X|X|X|X|X|X|X|}\hline
+ {}&HCM&Chia\-ngmai&Singa\-pore&Santa Marta&San Antonio&Los Angeles&Paris&Cape Town \\ \hline
+  {{\text{HCM}}}& - &{250}&{176}&{1039}& - & - & - & -  \\ \hline
+  {{\text{Chiangmai}}}& - & - & - & - &{1480}&{1565}&{647}& -  \\ \hline
+  {{\text{Singapore}}}& - & - & - & - &{1733}& - &{546}& -  \\ \hline
+  {{\text{Santa Marta}}}& - & - & - & - &{540}&{769}& - & -  \\ \hline
+  {{\text{San Antonio}}}& - & - & - & - & - &{-}&{-}&{1103} \\ \hline
+  {{\text{Los Angeles}}}& - & - & - & - & - & - &{-}&{967} \\ \hline
+  {{\text{Paris}}}& - & - & - & - & - & - & - &{2016} \\\hline
+  {{\text{Cape Town}}}& - & - & - & - & - & - & - & - \\ \hline
+\end{tabularx}
+\caption{Bảng trọng số đường bay giữa các trạm}
+\end{table}
 
-\textbf{Hints:}
-\begin{itemize}
-    \item Use \textbackslash\texttt{array} or \textbackslash\texttt{tabular} instead of normal matrices commands for easy aligning.
-    \item Use \textbackslash\texttt{scriptstyle} for small text in math mode. Can be used for $\times d$, $\times n$ and $\times 1$.
-\end{itemize}
+\subsection{Bài toán 3}
+Sobel là một thuận toán phát hiện biên cạnh dựa theo gradient trên hướng x và y. Dưới đây là mô tả của thuật toán.
 
-\subsection{Problem 2}
-Render the matrix below:
-\[
-    \begin{array}{rl@{}:cccc:cccc:c:@{}r r@{}c@{}l}
-                           &                                                                                            & \scriptstyle 1 &        &        & \scriptstyle d & \scriptstyle{d+1} &              &        & \scriptstyle{2d} & \scriptstyle{2d+1} &                                                                                                                                                                                                                                                                                               \\
-                           & \multirow{1}{*}{$\left[\begin{array}{r}\end{array}\right.$}                                & t_1            & t_2    & \cdots & t_d            & w_1               & w_2          & \cdots & w_d              & w_0                & \multirow{1}{*}{$\left.\begin{array}{r}\end{array}\right]$}                                                                                                                                                                                                                                   \\[0.5em]
-            \hdashline
-            \rule{0pt}{1.5em}
-        \scriptscriptstyle 1     & \multirow{15}{*}{$\left[\begin{array}{r}\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\end{array}\right.$} & -1             & 0      & \cdots & 0              & -1                & 0            & \cdots & 0                & 0                  & \multirow{15}{*}{$\left.\begin{array}{r}\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\end{array}\right]$} & \multirow{15}{*}{$\left[\begin{array}{r}\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\end{array}\right.$} & 0      & \multirow{15}{*}{$\left.\begin{array}{r}\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\end{array}\right]$} \\
-                           &                                                                                            & 0              & -1     & \cdots & 0              & 0                 & -1           & \cdots & 0                & 0                  &                                                                                            &                                                                                            & 0                                                                                                   \\
-                           &                                                                                            & \vdots         & \vdots & \ddots & \vdots         & \vdots            & \vdots       & \ddots & \vdots           & \vdots             &                                                                                            &                                                                                            & \vdots                                                                                              \\
-        \scriptscriptstyle d     &                                                                                            & 0              & 0      & \cdots & -1             & 0                 & 0            & \cdots & -1               & 0                  &                                                                                            &                                                                                            & 0                                                                                                   \\
-        \hdashline      \rule{0pt}{1.5em}
-        \scriptscriptstyle{d+1}  &                                                                                            & -1             & 0      & \cdots & 0              & 1                 & 0            & \cdots & 0                & 0                  &                                                                                            &                                                                                            & 0                                                                                                   \\
-                           &                                                                                            & 0              & -1     & \cdots & 0              & 0                 & 1            & \cdots & 0                & 0                  &                                                                                            &                                                                                            & 0                                                                                                   \\
-                           &                                                                                            & \vdots         & \vdots & \ddots & \vdots         & \vdots            & \vdots       & \ddots & \vdots           & \vdots             &                                                                                            &                                                                                            & \vdots                                                                                              \\
-        \scriptscriptstyle 2d    &                                                                                            & 0              & 0      & \cdots & -1             & 0                 & 0            & \cdots & 1                & 0                  &                                                                                            &                                                                                            & 0                                                                                                   \\
-        \hdashline
-        \rule{0pt}{1.5em}
-        \scriptscriptstyle{2d+1} &                                                                                            & 0              & 0      & \cdots & 0              & -y_1x_{1, 1}      & -y_1x_{1, 2} & \cdots & -y_1x_{1, d}     & -y_1               &                                                                                            &                                                                                            & -y_1                                                                                                \\
-                           &                                                                                            & 0              & 0      & \cdots & 0              & -y_2x_{2, 1}      & -y_2x_{2, 2} & \cdots & -y_2x_{2, d}     & -y_2               &                                                                                            &                                                                                            & -y_2                                                                                                \\
-                           &                                                                                            & \vdots         & \vdots & \ddots & \vdots         & \vdots            & \vdots       & \ddots & \vdots           & \vdots             &                                                                                            &                                                                                            & \vdots                                                                                              \\
-        \scriptscriptstyle{2d+n} &                                                                                            & 0              & 0      & \cdots & 0              & -y_nx_{n, 1}      & -y_nx_{n, 2} & \cdots & -y_nx_{n, d}     & -y_n               &                                                                                            &                                                                                            & -y_n                                                                                                \\
-    \end{array}
-\]
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.45\textwidth]{airplane_raw.png}
+    \includegraphics[width=0.45\textwidth]{airplane.png}
+\end{figure}
 
-\subsection{Problem 3}
-Try to scale the matrix in Problem 2 to 75\% of the text width.
-\begin{center}
-    \resizebox{0.75\textwidth}{!}{
-        $
-        \begin{array}{rl@{}:cccc:cccc:c:@{}r r@{}c@{}l}
-            &                                                                                            & \scriptstyle 1 &        &        & \scriptstyle d & \scriptstyle{d+1} &              &        & \scriptstyle{2d} & \scriptstyle{2d+1} &                                                                                                                                                                                                                                                                                               \\
-            & \multirow{1}{*}{$\left[\begin{array}{r}\end{array}\right.$}                                & t_1            & t_2    & \cdots & t_d            & w_1               & w_2          & \cdots & w_d              & w_0                & \multirow{1}{*}{$\left.\begin{array}{r}\end{array}\right]$}                                                                                                                                                                                                                                   \\[0.5em]
-            \hdashline
-            \rule{0pt}{1.5em}
-            \scriptscriptstyle 1     & \multirow{15}{*}{$\left[\begin{array}{r}\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\end{array}\right.$} & -1             & 0      & \cdots & 0              & -1                & 0            & \cdots & 0                & 0                  & \multirow{15}{*}{$\left.\begin{array}{r}\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\end{array}\right]$} & \multirow{15}{*}{$\left[\begin{array}{r}\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\end{array}\right.$} & 0      & \multirow{15}{*}{$\left.\begin{array}{r}\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\end{array}\right]$} \\
-            &                                                                                            & 0              & -1     & \cdots & 0              & 0                 & -1           & \cdots & 0                & 0                  &                                                                                            &                                                                                            & 0                                                                                                   \\
-            &                                                                                            & \vdots         & \vdots & \ddots & \vdots         & \vdots            & \vdots       & \ddots & \vdots           & \vdots             &                                                                                            &                                                                                            & \vdots                                                                                              \\
-            \scriptscriptstyle d     &                                                                                            & 0              & 0      & \cdots & -1             & 0                 & 0            & \cdots & -1               & 0                  &                                                                                            &                                                                                            & 0                                                                                                   \\
-            \hdashline      \rule{0pt}{1.5em}
-            \scriptscriptstyle{d+1}  &                                                                                            & -1             & 0      & \cdots & 0              & 1                 & 0            & \cdots & 0                & 0                  &                                                                                            &                                                                                            & 0                                                                                                   \\
-            &                                                                                            & 0              & -1     & \cdots & 0              & 0                 & 1            & \cdots & 0                & 0                  &                                                                                            &                                                                                            & 0                                                                                                   \\
-            &                                                                                            & \vdots         & \vdots & \ddots & \vdots         & \vdots            & \vdots       & \ddots & \vdots           & \vdots             &                                                                                            &                                                                                            & \vdots                                                                                              \\
-            \scriptscriptstyle 2d    &                                                                                            & 0              & 0      & \cdots & -1             & 0                 & 0            & \cdots & 1                & 0                  &                                                                                            &                                                                                            & 0                                                                                                   \\
-            \hdashline
-            \rule{0pt}{1.5em}
-            \scriptscriptstyle{2d+1} &                                                                                            & 0              & 0      & \cdots & 0              & -y_1x_{1, 1}      & -y_1x_{1, 2} & \cdots & -y_1x_{1, d}     & -y_1               &                                                                                            &                                                                                            & -y_1                                                                                                \\
-            &                                                                                            & 0              & 0      & \cdots & 0              & -y_2x_{2, 1}      & -y_2x_{2, 2} & \cdots & -y_2x_{2, d}     & -y_2               &                                                                                            &                                                                                            & -y_2                                                                                                \\
-            &                                                                                            & \vdots         & \vdots & \ddots & \vdots         & \vdots            & \vdots       & \ddots & \vdots           & \vdots             &                                                                                            &                                                                                            & \vdots                                                                                              \\
-            \scriptscriptstyle{2d+n} &                                                                                            & 0              & 0      & \cdots & 0              & -y_nx_{n, 1}      & -y_nx_{n, 2} & \cdots & -y_nx_{n, d}     & -y_n               &                                                                                            &                                                                                            & -y_n                                                                                                \\
-        \end{array}
-        $
-    }        
-\end{center}
-
+Mã giả nguồn của thuật toán 
+\begin{onehalfspace}
+\begin{lstlisting}[language=Python]
+def sobel_edge_detection(image, filter):
+    import numpy as np
+    im_x = convolution(image, filter)
+    im_y = convolution(image, np.flip(filter.T, axis=0))
+    gradient_magnitude = np.square(im_x) + np.square(im_y)
+    gradient_magnitude = np.sqrt(gradient_magnitude)
+    gradient_magnitude *= 255.0 / gradient_magnitude.max()
+    return gradient_magnitude
+\end{lstlisting}
+\end{onehalfspace}
+\bibliography{references}
 \end{document}
